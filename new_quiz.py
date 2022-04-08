@@ -20,7 +20,7 @@ headers = {
 # 'https://indeks.kompas.com/?site=all&date=2021-12-01&page=5'
 # ]
 
-
+hasil = []
 for i in range(1,6):
     alamat = "https://indeks.kompas.com/?site=all&date=2021-12-01&page="+str(i)
     data_request = Request(alamat, headers=headers)
@@ -34,7 +34,6 @@ for i in range(1,6):
 
     # list_title = [title.get_text().rstrip() for title in titles]
 
-    hasil = []
     for title in titles:
         list_title = title.get_text().rstrip()
         # for i in list_title:
@@ -45,7 +44,7 @@ for i in range(1,6):
         result.append(i)
         print(result)
 
-df = pd.DataFrame(hasil, columns=['Judul Berita'])
+df = pd.DataFrame(i, columns=['Judul Berita'])
 print(df)
 
     # result=[]

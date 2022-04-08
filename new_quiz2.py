@@ -42,4 +42,4 @@ for i in range(1,6):
 #     print(i)
 
 df = pd.DataFrame(hasil, columns=['Judul Berita'])
-print(df)
+df
